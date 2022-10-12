@@ -1,0 +1,2 @@
+1. I have taken a function with name count having arguments in parameter as $pattern and $text
+2.Used a nested loop where the first loop will slide $pattern from left to right and the second loop will check for the pattern match from current index i

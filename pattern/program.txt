@@ -1,0 +1,27 @@
+<?php
+function Patterncount($pattern, $text)
+{
+    $P = strlen($pattern);
+    $T = strlen($text);
+    $result = 0;
+ 
+    for ($i = 0; $i <= $T - $P; $i++)
+    {
+        for ($j = 0; $j < $P; $j++)
+            if ($text[$i+$j] != $pattern[$j])
+                break;
+ 
+        if ($j == $P)
+        {
+            $result++;
+            $j = 0;
+        }
+    }
+    return $result; 
+}
+ 
+$text = "tadadattaetadadadafa";
+$pattern = "dada";
+echo Patterncount($pattern, $text);
+ 
+?>
